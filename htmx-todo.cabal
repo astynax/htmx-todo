@@ -1,0 +1,35 @@
+cabal-version:      3.0
+name:               htmx-todo
+version:            0.1.0.0
+synopsis:           A simple HTMX powered Web-app
+homepage:
+license:            BSD-3-Clause
+license-file:       LICENSE
+author:             Aleksei Pirogov
+maintainer:         astynax@users.noreply.github.com
+copyright:          Aleksei Pirogov, 2022
+category:           Web
+extra-source-files:
+    README.md
+    data/htmx.min.js.gz
+
+executable htmx-todo
+    default-language: Haskell2010
+    default-extensions:
+        OverloadedStrings
+        ImportQualifiedPost
+        BlockArguments
+        TemplateHaskell
+    hs-source-dirs:   src
+    ghc-options:      -threaded
+    main-is:          Main.hs
+    -- other-modules:
+    build-depends:    base >=4.14.3.0
+                    , wai
+                    , wai-cli
+                    , blaze-html
+                    , blaze-markup
+                    , scotty
+                    , http-types
+                    , xstatic
+                    , xstatic-th
