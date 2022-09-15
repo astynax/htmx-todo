@@ -27,6 +27,8 @@ executable htmx-todo
     build-depends:    base >=4.14.3.0
                     , wai
                     , wai-cli
+                    , wai-websockets
+                    , websockets
                     , blaze-html
                     , blaze-markup
                     , scotty
